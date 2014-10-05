@@ -1,0 +1,19 @@
+= form_for @appointment do |f|
+  - if @appointment.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@appointment.errors.count, "error")} prohibited this appointment from being saved:"
+      %ul
+        - @appointment.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :doctor_id
+    = f.number_field :doctor_id
+  .field
+    = f.label :patient_id
+    = f.number_field :patient_id
+  .field
+    = f.label :time
+    = f.datetime_select :time
+  .actions
+    = f.submit 'Save'

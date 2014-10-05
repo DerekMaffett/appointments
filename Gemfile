@@ -10,6 +10,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'sqlite3'
 gem 'turbolinks'
 gem 'uglifier', '>= 1.3.0'
+gem 'foundation-rails'
 
 group :development do
   gem 'better_errors'
@@ -19,4 +20,6 @@ group :development do
   gem 'guard-livereload'
   gem 'guard-rails'
   gem 'spring'
+  gem 'rails_layout'
+  gem 'seed_dump'
 end

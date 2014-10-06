@@ -8,12 +8,12 @@
 
   .field
     = f.label :doctor_id
-    = f.number_field :doctor_id
+    = f.collection_select(:doctor_id, @doctors, :id, :name)
   .field
     = f.label :patient_id
-    = f.number_field :patient_id
+    = f.collection_select(:patient_id, @patients, :id, :name)
   .field
     = f.label :time
-    = f.datetime_select :time
+    = f.date_select :time
   .actions
     = f.submit 'Save'

@@ -13,10 +13,14 @@ class AppointmentsController < ApplicationController
   # GET /appointments/new
   def new
     @appointment = Appointment.new
+    @doctors = Doctor.all
+    @patients = Patient.all
   end
 
   # GET /appointments/1/edit
   def edit
+    @doctors = Doctor.all
+    @patients = Patient.all
   end
 
   # POST /appointments

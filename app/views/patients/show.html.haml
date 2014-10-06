@@ -4,6 +4,10 @@
   %b Name:
   = @patient.name
 
+%ul
+  = render(partial: 'doctor',
+    collection: @doctors) || 'This patient has no doctors'
+
 = link_to 'Edit', edit_patient_path(@patient)
 \|
 = link_to 'Back', patients_path

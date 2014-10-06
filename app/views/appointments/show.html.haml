@@ -2,10 +2,10 @@
 
 %p
   %b Doctor:
-  = @appointment.doctor_id
+  = @appointment.doctor.name
 %p
   %b Patient:
-  = @appointment.patient_id
+  = @appointment.patient.name
 %p
   %b Time:
   = @appointment.time

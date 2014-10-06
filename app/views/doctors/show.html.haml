@@ -4,6 +4,11 @@
   %b Name:
   = @doctor.name
 
+%h6 Patients
+%ul
+  = render(partial: 'patient',
+    collection: @patients) || 'This doctor has no patience.'
+
 = link_to 'Edit', edit_doctor_path(@doctor)
 \|
 = link_to 'Back', doctors_path

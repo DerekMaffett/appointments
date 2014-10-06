@@ -11,8 +11,8 @@
 
   - @appointments.each do |appointment|
     %tr
-      %td= appointment.doctor_id
-      %td= appointment.patient_id
+      %td= appointment.doctor.name
+      %td= appointment.patient.name
       %td= appointment.time
       %td= link_to 'Show', appointment
       %td= link_to 'Edit', edit_appointment_path(appointment)

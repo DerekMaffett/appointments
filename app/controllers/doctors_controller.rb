@@ -8,7 +8,7 @@ class DoctorsController < ApplicationController
 
   # GET /doctors/1
   def show
-    @patients = @doctor.patients
+    @patients = @doctor.patients.uniq
   end
 
   # GET /doctors/new
